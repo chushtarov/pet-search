@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import AboutSerch from "../AboutSerch/AboutSerch";
 
 const About = () => {
   const [advantage, setAdvantage] = useState([
@@ -67,21 +68,25 @@ const About = () => {
       </div>
       <div className="mt-10">
         <h1 className="font-semibold text-[45px]">Преимущества</h1>
-        <h3 className="text-[29px] mb-6">Идентификации животных по фотографии перед другими способами:</h3>
+        <h3 className="text-[29px] mb-6">
+          Идентификации животных по фотографии перед другими способами:
+        </h3>
         <div className="flex justify-between">
           {advantage.map((item, i) => {
             return (
-              <div key={i} className="w-[370px] h-[265px]  bg-slate-100 p-7 rounded-lg">
+              <div
+                key={i}
+                className="w-[370px] h-[265px]  bg-slate-100 p-7 rounded-lg"
+              >
                 <img src={item.avatar} alt="" />
                 <p className="text-[22px] my-3">{item.name}</p>
                 <p>{item.text}</p>
-                
-                
               </div>
             );
           })}
         </div>
       </div>
+      <AboutSerch/>
     </div>
   );
 };
