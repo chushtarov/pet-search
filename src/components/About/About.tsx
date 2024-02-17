@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 const About = () => {
+  const [advantage, setAdvantage] = useState([
+    {
+      id: 0,
+      name: "Гуманность",
+      text: "Абсолютно безболезненна для питомца (в отличие от микрочипа или клейма)",
+      avatar: "https://helppet.ru/img/icons/image1.svg",
+    },
+    {
+      id: 1,
+      name: "Простота",
+      text: "Производится обычным смартфоном, не требуя специального оборудования",
+      avatar: "https://helppet.ru/img/icons/image2.svg",
+    },
+    {
+      id: 2,
+      name: "Не меняется",
+      text: "Обладает такими характеристиками, как неотделимость от питомца и неизменность",
+      avatar: "https://helppet.ru/img/icons/image3.svg",
+    },
+  ]);
   return (
-    <div className="w-[1152px] m-auto">
-      <h1 className="text-[29px] my-6 font-semibold">О проекте</h1>
+    <div className="w-[1200px] m-auto">
+      <h1 className="text-[45px] my-6 font-semibold">О проекте</h1>
       <div className="flex justify-between bg-slate-100 p-10 rounded-lg">
-        <div className="w-[400px] text-[25px] ">
+        <div className="w-[600px] text-[45px] ">
           <h1 className="font-semibold">О технологии</h1>
         </div>
         <div className="text-[19px] text-justify">
@@ -45,10 +65,22 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div>
-        <h1>Преимущества</h1>
-        <h3>Идентификации животных по фотографии перед другими способами:</h3>
-        <div></div>
+      <div className="mt-10">
+        <h1 className="font-semibold text-[45px]">Преимущества</h1>
+        <h3 className="text-[29px] mb-6">Идентификации животных по фотографии перед другими способами:</h3>
+        <div className="flex justify-between">
+          {advantage.map((item, i) => {
+            return (
+              <div key={i} className="w-[370px] h-[265px]  bg-slate-100 p-7 rounded-lg">
+                <img src={item.avatar} alt="" />
+                <p className="text-[22px] my-3">{item.name}</p>
+                <p>{item.text}</p>
+                
+                
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
