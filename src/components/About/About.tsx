@@ -1,27 +1,9 @@
 import React, { useState } from "react";
 import AboutSerch from "../AboutSerch/AboutSerch";
+import {advantage} from '../../../public/facaBD/faceBD'
 
 const About = () => {
-  const [advantage, setAdvantage] = useState([
-    {
-      id: 0,
-      name: "Гуманность",
-      text: "Абсолютно безболезненна для питомца (в отличие от микрочипа или клейма)",
-      avatar: "https://helppet.ru/img/icons/image1.svg",
-    },
-    {
-      id: 1,
-      name: "Простота",
-      text: "Производится обычным смартфоном, не требуя специального оборудования",
-      avatar: "https://helppet.ru/img/icons/image2.svg",
-    },
-    {
-      id: 2,
-      name: "Не меняется",
-      text: "Обладает такими характеристиками, как неотделимость от питомца и неизменность",
-      avatar: "https://helppet.ru/img/icons/image3.svg",
-    },
-  ]);
+ 
   return (
     <div className="w-[1200px] m-auto">
       <h1 className="text-[45px] my-6 font-semibold">О проекте</h1>

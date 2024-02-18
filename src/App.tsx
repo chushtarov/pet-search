@@ -7,20 +7,18 @@ import Help from "./components/Help/Help";
 import Ads from "./components/Ads/Ads";
 import NewAds from "./components/NewAds/NewAds";
 
-
 function App() {
   return (
     <>
-    <Header />
+      <Header />
       <Routes>
-        <Route path="/about" element={<About/>} />
-        <Route path="/ads" element={<Ads/>} />
-        <Route path="/give" element={<Give/>} />
-        <Route path="/help" element={<Help/>} />
-        <Route path="/new" element={<NewAds/>} />
-        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/ads" element={<Ads />} />
+        <Route path="/give" element={<Give />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/new" element={<NewAds />} />
+        <Route path="/" element={<Home />} />
       </Routes>
-      
     </>
   );
 }
