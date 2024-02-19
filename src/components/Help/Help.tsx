@@ -19,13 +19,9 @@ const FaqItem = ({ question, answer, answerTwo }) => {
       </div>
       {isOpen && (
         <>
-        <p className="mt-5 text-justify">
-          {answer}
-          
-        </p>
-        <p className="mt-2 text-justify">{answerTwo}</p>
+          <p className="mt-5 text-justify">{answer}</p>
+          <p className="mt-2 text-justify">{answerTwo}</p>
         </>
-        
       )}
     </div>
   );
@@ -33,7 +29,8 @@ const FaqItem = ({ question, answer, answerTwo }) => {
 
 const Help = () => {
   return (
-    <div>
+    <div className="w-[1200px] m-auto ">
+      <h1 className="mt-10 text-[45px]">Часто задаваемые вопросы</h1>
       {qHelp.map((item, index) => (
         <FaqItem
           key={index}
