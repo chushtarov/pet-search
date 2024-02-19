@@ -6,6 +6,7 @@ import Give from "./components/Give/Give";
 import Help from "./components/Help/Help";
 import Ads from "./components/Ads/Ads";
 import NewAds from "./components/NewAds/NewAds";
+import Form from "./components/Form/Form";
 
 function App() {
   return (
@@ -17,7 +18,15 @@ function App() {
         <Route path="/give" element={<Give />} />
         <Route path="/help" element={<Help />} />
         <Route path="/new" element={<NewAds />} />
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              <Form />
+            </>
+          }
+        />
       </Routes>
     </>
   );
