@@ -16,7 +16,7 @@ const Header = () => {
       <div className="w-[330px]">
         <ul className="flex justify-between items-center">
           <li><NavLink to="/new">Создать объявление</NavLink></li>
-          <li>Войти</li>
+          <li><NavLink to="/login">Войти</NavLink></li>
         </ul>
       </div>
     </div>

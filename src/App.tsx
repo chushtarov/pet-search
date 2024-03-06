@@ -8,6 +8,7 @@ import Ads from "./components/Ads/Ads";
 import NewAds from "./components/NewAds/NewAds";
 import Form from "./components/Form/Form";
 import Serch from "./components/Serch/Serch";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path="/new" element={<NewAds />} />
         <Route path="/serch" element={<Serch />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="/"
           element={
